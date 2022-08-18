@@ -45,8 +45,8 @@ router.patch("/:name", function (req, res) {
 
   for (let item of items.items) {
     if (item.name === req.params.name) {
-      item.name = req.body.name;
-      item.price = req.body.price;
+      item.name = req.body.name || item.name;
+      item.price = req.body.price || item.price;
       updateItem = item;
     }
   }
