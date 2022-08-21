@@ -32,7 +32,7 @@ describe("GET /items", function() {
 
 describe("GET /items/:name", function() {
   it("Gets a single item", async function() {
-    const resp = await request(app).get(`/item/${popsicle.name}`);
+    const resp = await request(app).get(`/items/${popsicle.name}`);
 
     expect(resp.body).toEqual({name: "popsicle", "price": 1.45});
   });
